@@ -33,3 +33,10 @@ matrix = [
     [3,6,8]
 ] # 2d array can be used as a matrix consisting rows(i) and columns(j)
 
+Operations that can be performed on array are :
+
+-> Traversal : these can be helpful for searching and modifing elements in the array
+
+-> modifing elements: insertion, deletion
+
+-> searching : linear search, binary search
