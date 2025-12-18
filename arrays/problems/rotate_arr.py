@@ -61,6 +61,8 @@ def find_rotations(arr):
 
         if arr[mid] > arr[high]:
             low = mid+1
+        elif arr[mid] == arr[high]:
+            high -= 1
         else:
             high = mid
 
