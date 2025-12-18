@@ -40,3 +40,13 @@ Operations that can be performed on array are :
 -> modifing elements: insertion, deletion
 
 -> searching : linear search, binary search
+
+
+Juggling Algorithm
+
+we can use juggling algorithm for rotating the elements instead of copying in another array or moving elements one by one
+
+the idea behind juggling cycles is we can use the concept of cycles instead of moving elements one by one. each cycle is independent and represents the group of elements hat will shift among themselves during the rotations 
+if the starting index is i then then next elements will be present at indices (i+d)%n, (i+2d)%n, (i+3d)%n,...and so on until we reach the index i
+
+so for any element i the next element will be (i+d)%n. 
