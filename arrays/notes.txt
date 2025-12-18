@@ -1,0 +1,35 @@
+Array is a linear data structure where elements are stored in contiguous memnory, allowing constant time for access at the best and lineat time at the worst
+
+in python en empty array is declared as : **arr = []**
+
+Arrays can be classified as two types 
+
+1. Based on their size 
+2. Based on their dimensions 
+
+Based on their size:
+
+1. Fixed size arrays
+
+arr = [0]*5 gives an array of size 5 which later cant be increased or decreased to another size.
+
+the problem with this is when we declare an array of specific size then we just used small amount in it then the memory is wasted and when we needed more elements then its memory is not sufficient. the solution to this is creating a dynamic size array
+
+2. Dynamic size arrays
+
+arr = [] 
+
+now we have declared a 0 size array where we can add elements and delete them if not needed without worrying about memory
+
+Based on their dimensions:
+
+1. One-dimensional Array(1-D Array): this array is just like linear array, in mathematical terma it is a matrix with only 1 row and multiple number of columns
+
+2. Multi-dimensional Array: this is an array with more than one dimension, from 2d array to nd array we can create a various amount of arrays to store complex data in form of table 
+
+matrix = [
+    [1,3,5]
+    [6,7,9]
+    [3,6,8]
+] # 2d array can be used as a matrix consisting rows(i) and columns(j)
+
