@@ -45,3 +45,26 @@ def left_rotate(arr,d):
 
 arr1 = [1, 2, 3, 4, 5, 6]
 print(left_rotate(arr1,2))
+
+# we can also count the no. of rotations an array has made for an strictly increasing array
+
+def find_rotations(arr):
+    low = 0
+    high = len(arr)-1
+
+    while low<=high:
+
+        if arr[low] <= arr[high]:
+            return low
+        
+        mid = (low+high)//2
+
+        if arr[mid] > arr[high]:
+            low = mid+1
+        else:
+            high = mid
+
+    return low
+
+arr2 = [15, 18, 19, 3, 6, 12]
+print(find_rotations(arr2))
