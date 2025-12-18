@@ -68,5 +68,5 @@ def find_rotations(arr):
 
     return low
 
-arr2 = [15, 18, 19, 3, 6, 12]
+arr2 = [15, 18, 12, 3, 6, 12]
 print(find_rotations(arr2))
