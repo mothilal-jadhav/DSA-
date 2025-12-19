@@ -4,3 +4,17 @@ A linked list is a type of linear data structure individual items are not necess
 
 A node contains two things first is data and second is a link that connects it with another node.
 The first node is called the head node and we can traverse the whole list using this head and next links.
+
+
+Linked List:
+Data Structure: Non-contiguous
+Memory Allocation: Typically allocated one by one to individual elements
+Insertion/Deletion: Efficient
+Access: Sequential
+
+
+Array:
+Data Structure: Contiguous
+Memory Allocation: Typically allocated to the whole array
+Insertion/Deletion: Inefficient
+Access: Random
