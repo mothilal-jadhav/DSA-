@@ -1,0 +1,30 @@
+linked list allows us to have efficient insertion and deletion compared to arrays. in case of arrays the elements were stored in form of contiguous memeory 
+and if there is a case where i had to declare a fixed size array and then i dont use it then the memeory is wasted or else if i want ti insert elements beyond their capacity then it is not allowed.
+
+we can also use the dynamic arrays where appending and removing are easier by in built functions but they take O(n) time. instead we can use linked list 
+
+Linked list are of three types mainly : 
+-> Singly linked list 
+-> Doubly lined list
+-> Circular linked list
+
+
+in a Singly linked list the memory is stored at a specific location not related to other elements memory location. every element is located at a differet locations and all the address of their location are stored as a value and connected through a node and pointer
+
+Linked list can be represented as : [2|-]->[3|-]->[4|-]->[5|-]-> Null
+for a linked list are nothing but nodes connected with links. node consists of two parameters 1. Data 2. Next
+
+the first node is called as Head Node and we can traverse the linked list using Next link
+
+Linked List:
+Data Structure: Non-contiguous
+Memory Allocation: Typically allocated one by one to individual elements
+Insertion/Deletion: Efficient
+Access: Sequential
+
+
+Array:
+Data Structure: Contiguous
+Memory Allocation: Typically allocated to the whole array
+Insertion/Deletion: Inefficient
+Access: Random
