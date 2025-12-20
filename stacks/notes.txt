@@ -16,3 +16,23 @@ the use cases of stack are:
 2. finding next or previous smaller element
 3. stock spans/ histogram problems
 4. iterative tower of hentai problem
+
+Basic Terminologies of Stack:
+
+1. top - operations like push and pop are performed at the top of the Stack
+2. size - refers to the current number of elements present in the stack
+
+Types of Stack:
+
+1. Fixed Size Stack
+
+a fixed size stack has predefined capacity, once it is full then no element can be added or else it will overflow and if a stack is empty and we try to pop an element them it causes underflow
+this can be implemented using static array
+
+2. Dynamic Size Stack
+
+a Dynamic size stack can be grow or shrink based on the operations performed, if stack is full then its capacity increases as elements are added and memory usage shrinks as elements are removed
+can be implemented using dynamic array or linked list. 
+
+we generally use dynamic size as it does not cause the overflow problem
+
