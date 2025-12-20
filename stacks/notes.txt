@@ -38,3 +38,7 @@ can be implemented using dynamic array or linked list.
 
 we generally use dynamic size as it does not cause the overflow problem
 
+Advantages of stack are:
+
+1. It is very simple and easy to understand and implement
+2. It is very efficient in terms of time complexity, takes only O(1) time for insertion, deletion and peeking at top element
