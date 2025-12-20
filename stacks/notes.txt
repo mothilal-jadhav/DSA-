@@ -4,3 +4,8 @@ It follows the first in last out (FILO).
 
 it is more like elements are arranged in verical order in a closest and we remove the top most element which obviously will be the last element we push into the stack
 
+the main operations that we can use are :
+
+1. push
+2. pop
+3. peek
