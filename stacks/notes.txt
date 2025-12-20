@@ -1,0 +1,6 @@
+A stack is linear Data Structure which follows a particular order in which the operations are performed.
+
+It follows the first in last out (FILO).
+
+it is more like elements are arranged in verical order in a closest and we remove the top most element which obviously will be the last element we push into the stack
+
