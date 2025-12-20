@@ -9,3 +9,10 @@ the main operations that we can use are :
 1. push
 2. pop
 3. peek
+
+the use cases of stack are:
+
+1. finding next or previous greatest element
+2. finding next or previous smaller element
+3. stock spans/ histogram problems
+4. iterative tower of hentai problem
