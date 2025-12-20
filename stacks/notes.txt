@@ -6,9 +6,11 @@ it is more like elements are arranged in verical order in a closest and we remov
 
 the main operations that we can use are :
 
-1. push
-2. pop
-3. peek
+1. push()
+2. pop()
+3. top()
+4. isEmpty()
+5. size()
 
 the use cases of stack are:
 
