@@ -438,3 +438,11 @@ hnew = [h1(72)+i*h2(72)]%7
     72
     27
 ]
+
+Double hashing has poor cache performance but no clustering. Double hashing requires more computation time as two hash functions need to be computed.
+
+The choice of collision handling technique can have a significant impact on the performance of a hash table 
+Linear probing is simple and fast, but it can lead to clustering and can degrade performance 
+Quadratic probing is more spaced out, but it can also lead to clustering and can result in a situation where some slots are never checked
+Double hashing is more complex, but it can lead to more even distribution of keys and can provide better performance in some cases
+
