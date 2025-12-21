@@ -10,7 +10,20 @@ let the list l = [1,2,3,6,8]
 
 hash function be h(x) = x%10 
 
-then our hash table will be = [0,1,2,3,0,0,6,0,8,0] now we can access 8 in O(1) time we dont need O(n) time as in case of array
+then our hash table will be = 
+                                    [
+                                        0
+                                        1
+                                        2
+                                        3
+                                        0
+                                        0
+                                        6
+                                        0
+                                        8
+                                        0
+                                    ] 
+now we can access 8 in O(1) time we dont need O(n) time as in case of array
 
 if i have a element say 11 then it will go for index 1 but the issue is there is already a element present 
 
@@ -42,3 +55,14 @@ the traditional array would have been like [1,2,3,6,8,11,21,31,41,38,53,66,23]
 
 now searching numbers like 23 or 38 would take a lot of time in array but in hash table, we check in the index, if element is there then true else we will search the linked list chained to that index which would be O(n) for worst case but will be better than array 
 
+Advantages:
+Simple to implement 
+Hash table never fills up, we can always add more elements to the chain 
+Less sensitive to the hash function or load factors 
+It is mostly used when it is unknown how many and how frequently keys may be inserted or deleted
+
+Disadvantages: 
+The cache performance of chaining is not good as keys are stored using a linked list
+Wastage of Space as Some Parts of the hash table are never used 
+If the chain becomes long, then search time can become O(n) in the worst case
+Uses extra space for links
