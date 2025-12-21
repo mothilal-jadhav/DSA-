@@ -66,3 +66,47 @@ The cache performance of chaining is not good as keys are stored using a linked 
 Wastage of Space as Some Parts of the hash table are never used 
 If the chain becomes long, then search time can become O(n) in the worst case
 Uses extra space for links
+
+let a = no of slots in the hash table 
+    b = no of keys to be inserted into the hash table 
+
+Load factor (x) = b/a
+
+Expected time to search = O(1 + x)
+Expected time to delete = O(1 + x)
+Time to insert = O(1)
+
+Another way of handling collision is open addressing
+
+-> Open addressing:
+
+all elements are stored in the hash table itself
+
+So at any point, the size of the table must be greater than or equal to the total number of keys 
+
+we can increase table size by copying old data if needed. This approach is also known as closed hashing
+
+This entire procedure is based upon probing
+
+key operations:
+Insert(k): Keep probing until an empty slot is found. Once an empty slot is found, insert k. 
+Search(k): Keep probing until the slot's key doesn't become equal to k or an empty slot is reached. 
+Delete(k): If we simply delete a key, then the search may fail. So slots of deleted keys are marked specially as "deleted". 
+
+The insert can insert an item in a deleted slot, but the search doesn't stop at a deleted slot.
+
+Different ways of Open Addressing:
+
+1. Linear probing
+
+In linear probing, the hash table is searched sequentially that starts from the original location of the hash 
+in case the location that we get is already occupied, then we check for the next location.
+
+The function used for rehashing is: rehash(key) = (n+1)%table-size.
+
+Let hash(x) be the slot index computed using a hash function and S be the table size 
+
+If slot hash(x)%S is full, then we try (hash(x)+1)%S
+If (hash(x)+1)%S is also full, then we try (hash(x)+2)%S
+If (hash(x)+2)%S is also full, then we try (hash(x)+3)%S
+
