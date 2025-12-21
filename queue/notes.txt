@@ -16,3 +16,33 @@ Types of Queue:
 2. Double Ended Queue - (i) Input restricted Queue (ii) Output restricted Queue
 3. Priority Queue - (i) Ascending Priority Queue (ii) Descending Priority Queue
 
+Simple Queue
+
+A simple Queue follows the FIFO principle:
+-> insertion is allowed only at the rear 
+-> deletion is allowed only at the front
+-> can be implemented using a linked list or a circular array
+
+
+Double Queue (dequeue)
+
+In a Dequeue insertion and deletion is performed at both the ends
+
+Priority Queue 
+
+in this queue elements are assigned a priority and deletion happens on the basis of priority not on the position
+
+Operations:
+-> enqueue()
+-> dequeue()
+-> peek()
+-> size()
+-> isEmpty()
+-> isFull()
+
+Applications of queue:
+-> Job scheduling
+-> cpu scheduling
+-> networking
+-> buffer management
+
