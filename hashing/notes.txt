@@ -275,6 +275,7 @@ insert 68 , since 8 is taken and after checking whole the avalilable slot is ind
     28
 ]
 
+the problem with linear probing is clustering of elements, hence we use Quadratic probing for this issue
 
 2. Quadratic probing
 
@@ -292,4 +293,66 @@ let hash(x) be the slot index computed using hash function.
 If slot hash(x)%S is full, then we try (hash(x)+1*1)%S
 If (hash(x)+1*1)%S is also full, then we try (hash(x)+2*2)%S
 If (hash(x)+2*2)%S is also full, then we try (hash(x)+3*3)%S
+
+let the hash table be :
+
+[
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+]
+
+insert 9
+
+[
+    0
+    0
+    9
+    0
+    0
+    0
+    0
+]
+
+insert 38
+
+[
+    0
+    0
+    9
+    38
+    0
+    0
+    0
+]
+
+insert 358
+
+[
+    0
+    358
+    9
+    38
+    0
+    0
+    0
+]
+
+insert 16 , but index 2 is already taken we use (hash(x)+1*1)%S which gives index 3 but that index is already taken, hence we use (hash(x)+2*2)%S which would be index 6
+
+[
+    0
+    358
+    9
+    38
+    0
+    0
+    16
+]
+
+instead of using 4th index we used 6th index for avoinding clustering
 
