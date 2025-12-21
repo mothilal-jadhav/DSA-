@@ -46,3 +46,16 @@ Applications of queue:
 -> networking
 -> buffer management
 
+Queue can be implemented using array (both fixed and dynamic) 
+
+we can implement queue using dynamic array by maintaining only front pointer. the front pointer tracks the first element of the queue
+
+enqueue can be done by inserting the element at the next avilable position at the end. no rear pointer is needed
+
+dequeue can be done by removing the first element and incrementing the front pointer
+
+The space before front is never reused, and unlike basic array implementations, we do not shift elements after each dequeue. 
+This ensures both enqueue and dequeue operations run in O(1) time with a simple design.
+
+so the limitations for this method will be lot of memory wastage and infinite memory assumptions where as memory is always finite.
+
