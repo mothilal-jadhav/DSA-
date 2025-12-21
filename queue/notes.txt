@@ -1,0 +1,18 @@
+Queue is a Data Structure that is used to store and operate data in First In First Out (FIFO)
+
+It can be understood like standing in a queue for movie tickets and the person who came first will have the ticket and gets out of the queue
+
+difference b/w stack and queue is in stack elements are stored vertically and we can only access the top element where as in queue elements are stored in horizontal position and we can only access the element that is first.
+
+Basic Terminologies of Queue:
+
+1. Front - the front position of the queue that is ready to be served when removed, it is called as head of the queue
+2. Rear - the rear position of the queue that is added recently and called as tail of the queue
+3. size - current no of elements in the queue
+4. capacity - maximum no of elements queue can hold
+
+Types of Queue:
+1. Simple Queue
+2. Double Ended Queue - (i) Input restricted Queue (ii) Output restricted Queue
+3. Priority Queue - (i) Ascending Priority Queue (ii) Descending Priority Queue
+
