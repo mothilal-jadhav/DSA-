@@ -1,0 +1,17 @@
+Hashing is a technique used for storing and accessing the data efficiently 
+
+Hashing involves in mapping data to a specific index in a hash table using hash function. it enables fast retrival of information based on its key
+
+the best thing about hashing is we can perform actions like searching, inserting, and deltion in O(1) time on average
+
+hashing is mainly used for implementing a set of distinct elements(keys) and dictionaries(key value pair)
+
+let the list l = [1,2,3,6,8]
+
+hash function be h(x) = x%10 
+
+then our hash table will be = [0,1,2,3,0,6,8,0] now we can access 8 in O(1) time we dont need O(n) time as in case of array
+
+if i have a element say 11 then it will go for index 1 but the issue is there is already a element present 
+
+to counter this problem we can do : 
