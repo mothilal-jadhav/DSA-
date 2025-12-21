@@ -356,3 +356,85 @@ insert 16 , but index 2 is already taken we use (hash(x)+1*1)%S which gives inde
 
 instead of using 4th index we used 6th index for avoinding clustering
 
+3. Double Hashing 
+
+Double hashing is a technique that reduces clustering in an optimized way. 
+In this technique, the increments for the probing sequence are computed by using another hash function. 
+We use another hash function hash2(x) and look for the i*hash2(x) slot in the ith rotation. 
+
+let hash(x) be the slot index computed using hash function.  
+
+If slot hash(x) % S is full, then we try (hash(x) + 1*hash2(x)) % S
+If (hash(x) + 1*hash2(x)) % S is also full, then we try (hash(x) + 2*hash2(x)) % S
+If (hash(x) + 2*hash2(x)) % S is also full, then we try (hash(x) + 3*hash2(x)) % S
+
+let the hash table be :
+
+[
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+]
+
+insert 27
+
+[
+    0
+    0
+    0
+    0
+    0
+    0
+    27
+]
+
+insert 43
+
+[
+    0
+    43
+    0
+    0
+    0
+    0
+    27
+]
+
+insert 642
+but index 6 is taken then we use double Hashing 
+hnew = [h1(692)+i*h2(692)]%7
+     = [6 + 1*(1+692%5)]%7
+     = 9%7
+     = 2
+
+
+[
+    0
+    43
+    642
+    0
+    0
+    0
+    27
+]
+
+insert 72
+but index 2 is taken then we use double Hashing 
+hnew = [h1(72)+i*h2(72)]%7
+     = [2 + 1*(1+72%5)]%7
+     = 5%7
+     = 5
+
+[
+    0
+    43
+    642
+    0
+    0
+    72
+    27
+]
