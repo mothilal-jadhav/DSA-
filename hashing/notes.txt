@@ -110,3 +110,186 @@ If slot hash(x)%S is full, then we try (hash(x)+1)%S
 If (hash(x)+1)%S is also full, then we try (hash(x)+2)%S
 If (hash(x)+2)%S is also full, then we try (hash(x)+3)%S
 
+let the hash table be :
+
+[
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+]
+
+insert 8
+
+[
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    8
+    0
+]
+
+insert 12
+
+[
+    0
+    0
+    12
+    0
+    0
+    0
+    0
+    0
+    8
+    0
+]
+
+insert 17
+
+[
+    0
+    0
+    12
+    0
+    0
+    0
+    0
+    17
+    8
+    0
+]
+
+insert 25
+
+[
+    0
+    0
+    12
+    0
+    0
+    25
+    0
+    17
+    8
+    0
+]
+
+insert 28 but wait index 8 is already full, then we will use (hash(x)+1)%S which gives index 9
+
+[
+    0
+    0
+    12
+    0
+    0
+    25
+    0
+    17
+    8
+    28
+]
+
+insert 35 but index 5 is already taken so we will use (hash(x)+1)%S which gives index 6
+
+[
+    0
+    0
+    12
+    0
+    0
+    25
+    35
+    17
+    8
+    28
+]
+
+insert 44 
+
+[
+    0
+    0
+    12
+    0
+    44
+    25
+    35
+    17
+    8
+    28
+]
+
+insert 48 but index 8 is already taken lets check 9th index, it is also taken then we will check for another index through (hash(x)+2)%S which gives index 0
+
+[
+    48
+    0
+    12
+    0
+    44
+    25
+    35
+    17
+    8
+    28
+]
+
+insert 55 but index 5 taken, lets check index 6 it already taken, after cheking for avalilable slots we got the index 1
+
+[
+    48
+    55
+    12
+    0
+    44
+    25
+    35
+    17
+    8
+    28
+]
+
+insert 68 , since 8 is taken and after checking whole the avalilable slot is index 3
+
+[
+    48
+    55
+    12
+    68
+    44
+    25
+    35
+    17
+    8
+    28
+]
+
+
+2. Quadratic probing
+
+in this case the interval between probes will increase proportionally to the hash value.
+
+Quadratic probing is a method with the help of which we can solve the problem of clustering that was occuring in linear probing
+
+This method is also known as the mid-square method
+
+In this method, we look for the i2'th slot in the ith iteration. 
+We always start from the original hash location. If only the location is occupied then we check the other slots.
+
+let hash(x) be the slot index computed using hash function.  
+
+If slot hash(x)%S is full, then we try (hash(x)+1*1)%S
+If (hash(x)+1*1)%S is also full, then we try (hash(x)+2*2)%S
+If (hash(x)+2*2)%S is also full, then we try (hash(x)+3*3)%S
+
