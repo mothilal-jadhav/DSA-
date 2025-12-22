@@ -17,3 +17,11 @@ B & D -> parent and child Nodes
 B & E -> parent and child Nodes
 
 B D E -> a sub tree where B acts as root 
+
+
+Types of trees:
+
+1. Binary Tree
+2. Ternary Tree
+3. N -ary Tree
+
