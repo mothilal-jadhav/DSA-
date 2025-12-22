@@ -23,10 +23,10 @@ class Hashmap:
         self.arr = [None]*self.capacity
 
     def h1(self,key):
-        return key%self.capacity
+        return hash(key)%self.capacity
     
     def h2(self,key):
-        return 1+ (key%(self.capacity-1))
+        return 1+ (hash(key)%(self.capacity-1))
     
     def loadFactor(self):
         return self.size / self.capacity
@@ -97,7 +97,7 @@ class Hashmap:
     
     def rehash(self):
         old_arr = self.arr
-        self.capacity = self.capacity * 2 + 1  # keep prime-ish
+        self.capacity = self._next_prime(self.capacity * 2)  # keep prime-ish
         self.arr = [None] * self.capacity
         self.size = 0
 
@@ -109,6 +109,20 @@ class Hashmap:
         for node in self.arr:
             if node is not None and node is not self.dummy:
                 print(node.key, node.value)
+
+    def _is_prime(self, n):
+        if n < 2:
+            return False
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    def _next_prime(self, n):
+        while not self._is_prime(n):
+            n += 1
+        return n
+
 
 
 def test_double_hashmap():
@@ -190,3 +204,41 @@ def test_double_hashmap():
 
 
 test_double_hashmap()
+
+def test_generic_hashmap():
+    hm = Hashmap()
+
+    # int keys
+    hm.insert(1, "one")
+    hm.insert(2, "two")
+    assert hm.get(1) == "one"
+    assert hm.get(2) == "two"
+
+    # string keys
+    hm.insert("apple", 10)
+    hm.insert("banana", 20)
+    assert hm.get("apple") == 10
+    assert hm.get("banana") == 20
+
+    # tuple keys
+    hm.insert((1, 2), "pair")
+    assert hm.get((1, 2)) == "pair"
+
+    # overwrite
+    hm.insert("apple", 99)
+    assert hm.get("apple") == 99
+
+    # delete
+    assert hm.delete("banana") == 20
+    assert hm.get("banana") == -1
+
+    # rehash stress
+    for i in range(500):
+        hm.insert(f"key{i}", i)
+
+    for i in range(500):
+        assert hm.get(f"key{i}") == i
+
+    print("ALL GENERIC HASHMAP TESTS PASSED")
+
+test_generic_hashmap()
