@@ -8,36 +8,39 @@ class Hashmap:
         self.capacity = 20
         self.size = 0
         self.arr = [None]*self.capacity
-        self.dummy = HashNode(-1,-1)
+        self.dummy = HashNode(None,None)
 
     def hashFun(self,key):
         return key%self.capacity
     
     def insert(self,key,value):
-        temp = HashNode(key,value)
 
         hashIndex = self.hashFun(key)
+        start = hashIndex
 
         while self.arr[hashIndex] is not None and \
-                self.arr[hashIndex].key != key and \
-                self.arr[hashIndex].key != -1:
+                self.arr[hashIndex].key is not self.dummy and \
+                self.arr[hashIndex].key != key:
             hashIndex = (hashIndex+1)%self.capacity
+            if hashIndex == start:
+                return
 
-        if self.arr[hashIndex] is None or self.arr[hashIndex].key == -1:
+        if self.arr[hashIndex] is None or self.arr[hashIndex].key is self.dummy:
             self.size += 1
-        self.arr[hashIndex] = temp
+        self.arr[hashIndex] = HashNode(key, value)
 
 
     def delete(self,key):
         hashIndex = self.hashFun(key)
-
-        while self.arr[hashIndex] is not None:
-            if self.arr[hashIndex].key == key:
+        counter = 0
+        while counter < self.capacity and self.arr[hashIndex] is not None:
+            if self.arr[hashIndex] is not self.dummy and self.arr[hashIndex].key == key:
                 temp = self.arr[hashIndex]
                 self.arr[hashIndex] = self.dummy
                 self.size -= 1
                 return temp.value
             hashIndex = (hashIndex+1)%self.capacity
+            counter += 1
 
         return -1
     
@@ -46,10 +49,8 @@ class Hashmap:
         hashIndex = self.hashFun(key)
         counter = 0
 
-        while self.arr[hashIndex] is not None:
-            if counter > self.capacity:
-                return -1
-            if self.arr[hashIndex].key == key:
+        while counter < self.capacity and self.arr[hashIndex] is not None:
+            if self.arr[hashIndex] is not self.dummy and self.arr[hashIndex].key == key:
                 temp = self.arr[hashIndex]
                 return temp.value
             hashIndex = (hashIndex+1)%self.capacity
@@ -57,7 +58,7 @@ class Hashmap:
 
         return -1
     
-    def size(self):
+    def sizeCount(self):
         return self.size
     
     def isEmpty(self):
