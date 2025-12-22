@@ -44,3 +44,19 @@ Basic Terms In Tree Data Structure:
 -> Subtree:  A node and all its descendants form a subtree.
 
 
+Importance of Tree Data Structure:
+
+-> Trees are useful for storing data that naturally forms a hierarchy.
+-> File systems on computers are structured as trees, with folders containing subfolders and files.
+-> The DOM (Document Object Model) of an HTML page is a tree:The <html> tag is the root.<head> and <body> are its children.These tags can have their own child nodes, forming a hierarchical structure.
+-> Trees help in efficient data organization and retrieval for hierarchical relationships.
+
+
+Properties of Tree Data Structure:
+
+-> Number of edges: An edge is the connection between two nodes. A tree with N nodes will always have N - 1 edges. There is exactly one path from any node to any other node in the tree.
+-> Depth of a node: The depth of a node is the length of the path from the root to that node. Each edge in the path adds 1 unit to the length. Equivalently, it is the number of edges from the root to the node.
+-> Height of the tree: The height of the tree is the length of the longest path from the root to any leaf node.
+-> Degree of a node: The degree of a node is the number of subtrees attached to it.
+   A leaf node has a degree of 0.
+   The degree of the root is the maximum degree among all nodes in the tree.
