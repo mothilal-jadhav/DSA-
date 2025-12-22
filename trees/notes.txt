@@ -1,0 +1,19 @@
+Tree Data Structure is a non linear data Structure where elements are collected via edges and stored in nodes such that there exists only one path between any nodes
+
+
+                                                (A)         -> level 0
+                                                /  \
+                                              (B)   (C)     -> level 1
+                                              / \    / \  
+                                            (D) (E) (F) (G) -> level 2
+
+
+A -> Root
+D E F G -> Leaf Nodes
+D E -> siblings
+F G -> siblings
+
+B & D -> parent and child Nodes
+B & E -> parent and child Nodes
+
+B D E -> a sub tree where B acts as root 
