@@ -1,11 +1,15 @@
 Tree Data Structure is a non linear data Structure where elements are collected via edges and stored in nodes such that there exists only one path between any nodes
+A tree is a hierarchical data structure used to organize and represent data in a parent–child relationship.
+It consists of nodes, where the topmost node is called the root, and every other node can have one or more child nodes.
+
+
 
 
                                                 (A)         -> level 0
                                                 /  \
                                               (B)   (C)     -> level 1
                                               / \    / \  
-                                            (D) (E) (F) (G) -> level 2
+                                            (D) (E) (F) (G) -> level 2          height of this tree is 2.
 
 
 A -> Root
@@ -24,4 +28,19 @@ Types of trees:
 1. Binary Tree
 2. Ternary Tree
 3. N -ary Tree
+
+Basic Terms In Tree Data Structure:
+
+-> Parent Node: A node that is an immediate predecessor of another node. Example: B is the parent of D and E.
+-> Child Node: A node that is an immediate successor of another node. Example: D and E are children of B.
+-> Root Node: The topmost node in a tree, which does not have a parent. Example: A is the root node.
+-> Leaf Node (External Node): Nodes that do not have any children. Example: D E F G are leaf nodes.
+-> Ancestor: Any node on the path from the root to a given node (excluding the node itself). Example: A and B are ancestors of D.
+-> Descendant: A node x is a descendant of another node y if y is an ancestor of x. Example: F and G are descendants of A.
+-> Sibling: Nodes that share the same parent. Example: F and G are siblings, and D and E are siblings.
+-> Level of a Node: The number of edges in the path from the root to that node.The root node is at level 0.
+-> Internal Node: A node with at least one child.
+-> Neighbor of a Node: The parent or children of a node.
+-> Subtree:  A node and all its descendants form a subtree.
+
 
