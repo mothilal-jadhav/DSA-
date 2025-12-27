@@ -17,7 +17,7 @@ def printParent(node,parent):
         print((str(node.data)) + ' -> Null')
 
     else:
-        print(str(node.data)+ ' -> ' str(parent.data))
+        print((str(node.data))+ ' -> ' (str(parent.data)))
 
     for child in node.children:
         printParent(child,node)
