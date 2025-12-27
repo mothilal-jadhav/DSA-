@@ -23,3 +23,14 @@ def printParent(node,parent):
         printParent(child,node)
 
 
+# function to print leadnodes
+
+def leafNodes(node):
+    if not node.children:
+        print(str(node.data))
+        return
+    
+    for child in node.children:
+        leafNodes(child)
+
+        
