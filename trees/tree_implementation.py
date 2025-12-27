@@ -33,4 +33,18 @@ def leafNodes(node):
     for child in node.children:
         leafNodes(child)
 
+
+# degree of nodes
+
+def degree(node,parent):
+    deg = len(node.children)
+
+    if parent is not None:
+        deg += 1
+
+    print(str(node.data) + " -> " + str(deg))
+
+    for child in node.children:
+        degree(child,node)
+
         
